@@ -1,0 +1,111 @@
+﻿<Window x:Class="ElephantFoot.UI.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElephantFoot.UI"
+        mc:Ignorable="d"
+        Title="ProfileWindow" Height="auto" Width="900" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <ScrollViewer Name="MainProgramScrollViewer" VerticalScrollBarVisibility="Auto">
+        <Viewbox>
+            <Grid Width="900">
+                <StackPanel>
+                    <!-- Header -->
+                    <Grid VerticalAlignment="Center">
+                        <Border Background="#006400"/>
+                        <Button x:Name="HomeScreenButton" Style="{StaticResource HeaderButton}" Content="Elephant Foot" Margin="5,4,685,5" Click="HomeScreenButton_Click" />
+
+                        <Button x:Name="CartButton" Style="{StaticResource HeaderButton}" Content="Cart" Margin="700,4,130,5" Click="CartButton_Click" BorderBrush="White" Width="70" FontSize="15"/>
+                        
+                        <Button x:Name="ProfileButton" Style="{StaticResource HeaderButton}" Content="Example User" Margin="775,4,5,5" Click="ProfileButton_Click" FontSize="15">
+                            <Button.ContextMenu>
+                                <ContextMenu x:Name="userContextMenu" Background="#006400" BorderBrush="White" BorderThickness="1" Foreground="Yellow" FontSize="15">
+                                    <MenuItem Header="My Profile" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Order" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Logout" Click="MenuItem_Click"/>
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                    </Grid>
+
+                    <Grid Margin="10">
+                        <!--User Profile-->
+                        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10">
+                            <StackPanel>
+                                <TextBlock Text="Acccount Information" FontSize="30" Margin="10" HorizontalAlignment="Center"/>
+                                <Separator HorizontalAlignment="Stretch" Width="700" BorderBrush="Black" BorderThickness="2"/>
+
+                                <Grid Margin="0,20,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="1.5*"/>
+                                        <ColumnDefinition Width="0.5*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Margin="10,25,10,10">
+                                        <Border BorderBrush="Black" BorderThickness="2" Height="150" Width="150" CornerRadius="100" Margin="0,0,0,20">
+                                            <Border.Background>
+                                                <ImageBrush ImageSource="d:\fpt\personal project\elephantfoot\elephantfoot.ui\oops-404-error-with-broken-robot-concept-illustration_114360-5529.avif"/>
+                                            </Border.Background>
+                                        </Border>
+                                        <TextBlock Name="UserNameTextBlock" Text="Example User" HorizontalAlignment="Center" FontWeight="ExtraBold" FontSize="15"/>
+                                        <TextBlock Name="UserEmailTextBlock" Text="Example@gmail.com" HorizontalAlignment="Center" FontSize="12"/>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="5" Grid.Column="1">
+                                        <StackPanel Orientation="Vertical" Margin="5">
+                                            <TextBlock Text="Full Name" FontSize="15"/>
+                                            <TextBox Name="NameTextBox" Width="250" FontSize="15" HorizontalAlignment="Left"/>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="5">
+                                            <TextBlock Text="Password" FontSize="15"/>
+                                            <PasswordBox Name="PasswordBox" Width="250" HorizontalAlignment="Left" FontSize="15"/>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="5">
+                                            <TextBlock Text="Email" FontSize="15"/>
+                                            <TextBox Name="EmailTextBox" Width="250" HorizontalAlignment="Left" FontSize="15"/>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="5">
+                                            <TextBlock Text="Address" FontSize="15"/>
+                                            <TextBox Name="AddressTextBox" Width="250" HorizontalAlignment="Left" FontSize="15"/>
+                                        </StackPanel>
+
+                                        <StackPanel Margin="5">
+                                            <TextBlock Text="Phone" FontSize="15"/>
+                                            <TextBox Name="PhoneTextBox" Width="250" HorizontalAlignment="Left" FontSize="15"/>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <StackPanel Margin="0,25,0,10" Grid.Column="2">
+                                        <Button Name="SaveButton" Style="{StaticResource RadiusButton}" Content="Save" HorizontalAlignment="Center" Width="100" FontSize="15" Click="SaveButton_Click"/>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                    <!-- About Me -->
+                    <Grid Grid.Row="4" Margin="0,10,0,10">
+                        <Border Background="#006400" Padding="20">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="About Me" FontSize="30" FontWeight="ExtraBlack" Foreground="Yellow" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Sample Description aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" FontSize="15" Foreground="Yellow" TextWrapping="Wrap"/>
+                                </StackPanel>
+                                <Image Grid.Column="1" Source="/oops-404-error-with-broken-robot-concept-illustration_114360-5529.avif" Height="200" Width="200"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+
+                </StackPanel>
+            </Grid>
+        </Viewbox>
+    </ScrollViewer>
+</Window>

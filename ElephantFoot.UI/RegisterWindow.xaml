@@ -1,0 +1,61 @@
+﻿<Window x:Class="ElephantFoot.UI.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElephantFoot.UI"
+        mc:Ignorable="d"
+        Title="Register" Height="460" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <!-- Border for Register Form -->
+        <Border Margin="20,20,20,20" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Padding="10">
+            <StackPanel>
+                <!-- Title -->
+                <TextBlock Text="Register" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center"/>
+
+                <!-- Register Form -->
+                <StackPanel>
+                    <!-- User Name -->
+                    <TextBlock Text="User Name" Margin="0,5,0,0"/>
+                    <Grid Margin="0,5" Height="20">
+                        <TextBox x:Name="UserNameTextBox" GotFocus="UserNameTextBox_GotFocus" LostFocus="UserNameTextBox_LostFocus"/>
+                        <TextBlock Name="UserNameWatermark" Text="Jack The Ripper" Foreground="Gray" Margin="5,0,0,0" VerticalAlignment="Center" IsHitTestVisible="False"/>
+                    </Grid>
+                    <TextBlock Name="UserNameErrorTextBox" Visibility="Collapsed"/>
+
+                    <!-- Email -->
+                    <TextBlock Text="Email" Margin="0,5,0,0"/>
+                    <Grid Margin="0,5" Height="20">
+                        <TextBox Name="EmailTextBox" GotFocus="EmailTextBox_GotFocus" LostFocus="EmailTextBox_LostFocus"/>
+                        <TextBlock Name="EmailWatermark" Text="example@gmail.com" Foreground="Gray" Margin="5,0,0,0" VerticalAlignment="Center" IsHitTestVisible="False"/>
+                    </Grid>
+
+                    <!-- Password -->
+                    <TextBlock Text="Password" Margin="0,5,0,0"/>
+                    <PasswordBox Name="PasswordText" Margin="0,5,0,0" />
+
+                    <!-- Password Confirm -->
+                    <TextBlock Text="Confirm Password" Margin="0,5,0,0"/>
+                    <PasswordBox Name="PasswordConfirmText" Margin="0,5,0,0" />
+
+                    <!-- Register Button -->
+                    <Button Style="{StaticResource RadiusButton}" Content="Register" Name="RegisterButton" Margin="0,10,0,0" Height="32" FontSize="20" Click="RegisterButton_Click"/>
+
+                    <!-- Divider -->
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,10,0,0">
+                        <Separator HorizontalAlignment="Stretch" Width="152" />
+                        <TextBlock Text="or" HorizontalAlignment="Center" Margin="10,0" />
+                        <Separator HorizontalAlignment="Stretch" Width="152" />
+                    </StackPanel>
+
+                    <!-- Sign in with other accounts -->
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="Sign in with" HorizontalAlignment="Center" Height="20"/>
+                        <!-- Example Buttons for Google and Facebook -->
+                        <Button Style="{StaticResource RadiusButton}" Name="LoginViaGoogleButton" Content="Google" Height="30" FontWeight="ExtraBold" FontSize="15" Foreground="White" Background="red" Margin="0,5,0,0" Click="LoginViaGoogleButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,120 @@
+﻿<Window x:Class="ElephantFoot.UI.BookDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ElephantFoot.UI"
+        mc:Ignorable="d"
+        Title="BookDetailWindow" WindowStartupLocation="CenterScreen" WindowState="Maximized" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Viewbox>
+                <Grid Width="900">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <!-- Header -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Sản phẩm chi tiết -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Book Description -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- Related Products -->
+                        <RowDefinition Height="Auto"/>
+                        <!-- About Me -->
+                    </Grid.RowDefinitions>
+
+                    <!-- Header -->
+                    <Grid VerticalAlignment="Center">
+                        <Border Background="#006400"/>
+                        <Button x:Name="HomeScreenButton" Style="{StaticResource HeaderButton}" Content="Elephant Foot" Margin="5,4,685,5" Click="HomeScreenButton_Click" />
+                        
+                        <Button x:Name="CartButton" Style="{StaticResource HeaderButton}" Content="Cart" Margin="700,4,130,5" Click="CartButton_Click" BorderBrush="White" Width="70" FontSize="15"/>
+
+                        <Button x:Name="ProfileButton" Style="{StaticResource HeaderButton}" Content="Example User" Margin="775,4,5,5" Click="ProfileButton_Click" FontSize="15">
+                            <Button.ContextMenu>
+                                <ContextMenu x:Name="userContextMenu" Background="#006400" BorderBrush="White" BorderThickness="1" Foreground="Yellow" FontSize="15">
+                                    <MenuItem Header="My Profile" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Order" Click="MenuItem_Click"/>
+                                    <MenuItem Header="Logout" Click="MenuItem_Click"/>
+                                </ContextMenu>
+                            </Button.ContextMenu>
+                        </Button>
+                    </Grid>
+
+                    <!-- Sản phẩm chi tiết -->
+                    <Grid Grid.Row="1" Margin="40,10,40,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Hình ảnh sản phẩm -->
+                        <Border CornerRadius="10" BorderThickness="1" BorderBrush="Black" Background="LightGray" Grid.Column="0" Margin="0,8,48,0" Height="280" VerticalAlignment="Top">
+                            <Grid Margin="0,0,2,-1">
+                                <Image Source="/oops-404-error-with-broken-robot-concept-illustration_114360-5529.avif" Margin="19,0,17,0" VerticalAlignment="Center" Height="240" Width="240" RenderTransformOrigin="0.46,0.5"/>
+                                <Button Style="{StaticResource TransparentButton}" x:Name="PreviousImageButton" Content="◀" Margin="0,0,210,0" Click="PreviousImageButton_Click"/>
+                                <Button Style="{StaticResource TransparentButton}" x:Name="NextImageButton" Content="▶" Margin="210,0,0,0" Click="NextImageButton_Click"/>
+                            </Grid>
+                        </Border>
+
+                        <!-- Thông tin sản phẩm -->
+                        <Grid Margin="298,8,0,0" Grid.ColumnSpan="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="79*"/>
+                                <RowDefinition Height="65*"/>
+                            </Grid.RowDefinitions>
+                            <Border Margin="2,0,0,0" CornerRadius="10" BorderBrush="Black" BorderThickness="1" Grid.RowSpan="2"/>
+                            <StackPanel Margin="20,20,20,20" Grid.RowSpan="2">
+                                <TextBlock x:Name="TitleTextBlock" Text="Sample" FontSize="15" FontWeight="Bold" Margin="0,5" TextWrapping="Wrap"/>
+                                <TextBlock x:Name="AuthorTextBlock" Text="Sample Author" FontSize="12" Margin="0,5"/>
+                                <TextBlock x:Name="QuantityTextBlock" Text="Quantity: 10" FontSize="12" Margin="0,5"/>
+                                <TextBlock x:Name="PriceTextBlock" Text="85.500 đ" Foreground="Red" FontWeight="Bold" FontSize="15" Margin="0,5"/>
+                                <ComboBox HorizontalAlignment="Left" Width="140" Margin="0,5"/>
+                                <Button x:Name="AddToCartButton" Content="Add to Cart" Background="Aqua" Foreground="#008b8b" Margin="0,5" Click="AddToCartButton_Click" Height="40"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+
+                    <!-- Book Description -->
+                    <Grid Grid.Row="2" Margin="40,10,40,10">
+                        <Border BorderThickness="1" BorderBrush="Black" CornerRadius="20" Padding="20">
+                            <StackPanel>
+                                <TextBlock Text="Book Description" FontSize="15" FontWeight="Bold" Margin="0,0,0,10"/>
+                                <TextBlock x:Name="BookDesciptionTextBlock" Text="Thiên Sứ Nhà Bên - Tập 8 “Hôm nay… mình không về… có được không…?”
+
+Lễ hội trường nhộn nhịp đã trôi qua, mọi người lại quay về với cuộc sống thường nhật. Amane một lần nữa truyền đạt cảm xúc của cậu đến Mahiru bằng lời nói, đồng thời hứa hẹn về một tương lai bên nhau. Vì muốn tặng Mahiru một món quà bảo chứng cho lời hứa đó, Amane quyết định đi làm thêm. Mặt khác, Mahiru trong lúc cô đơn chờ đợi Amane đi làm về, đã bí mật làm một thứ để bày tỏ tình cảm của mình với cậu…
+
+Đây là câu chuyện tình ngọt ngào với cô gái nhà bên tuy lạnh lùng nhưng thật đáng yêu đã được ủng hộ nhiệt tình trên trang Shousetsuka ni Narou. " TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+                    <!-- Related Products -->
+                    <Grid Grid.Row="3" Margin="40,10,40,10">
+                        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Padding="20">
+                            <TextBlock Text="Related Products" FontSize="15" FontWeight="Bold"/>
+                        </Border>
+                    </Grid>
+
+                    <!-- About Me -->
+                    <Grid Grid.Row="4" Margin="0,10,0,10">
+                        <Border Background="#006400" Padding="20">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <StackPanel Grid.Column="0">
+                                    <TextBlock Text="About Me" FontSize="30" FontWeight="ExtraBlack" Foreground="Yellow" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Sample Description aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" FontSize="15" Foreground="Yellow" TextWrapping="Wrap"/>
+                                </StackPanel>
+                                <Image Grid.Column="1" Source="/oops-404-error-with-broken-robot-concept-illustration_114360-5529.avif" Height="200" Width="200"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Viewbox>
+        </ScrollViewer>
+    </Grid>
+</Window>
