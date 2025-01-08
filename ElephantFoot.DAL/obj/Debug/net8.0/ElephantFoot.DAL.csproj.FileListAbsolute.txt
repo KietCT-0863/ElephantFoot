@@ -26,3 +26,4 @@ D:\FPT\Personal Project\ElephantFoot\ElephantFoot.DAL\obj\Debug\net8.0\refint\El
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.DAL\obj\Debug\net8.0\ElephantFoot.DAL.pdb
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.DAL\obj\Debug\net8.0\ElephantFoot.DAL.genruntimeconfig.cache
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.DAL\obj\Debug\net8.0\ref\ElephantFoot.DAL.dll
+D:\FPT\Personal Project\ElephantFoot\ElephantFoot.DAL\obj\Debug\net8.0\ElephantFoot.DAL.sourcelink.json

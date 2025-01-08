@@ -17,33 +17,33 @@ namespace ElephantFoot.BLL
 
         public List<User> GetAllUsers() => _userRepo.GetAllUsersFromDB();
 
-        public User? Authentication(string email, string password)
-        {
-            _currentUser = _userRepo.GetUserInDb(email);
+        //public User? Authentication(string email, string password)
+        //{
+        //    _currentUser = _userRepo.GetUserInDb(email);
 
-            if (_currentUser == null)
-            {
-                return null;
-            }
+        //    if (_currentUser == null)
+        //    {
+        //        return null;
+        //    }
 
-            if (_currentUser.Password != password)
-            {
-                _currentUser.Password = "";
-                return _currentUser;
-            }
+        //    if (_currentUser.Password != password)
+        //    {
+        //        _currentUser.Password = "";
+        //        return _currentUser;
+        //    }
 
-            return _currentUser;
-        }
+        //    return _currentUser;
+        //}
 
-        public bool IsAvailable()
-        {
-            if (_currentUser == null || _currentUser.Available == false)
-            {
-                return false;
-            }
+        //public bool IsAvailable()
+        //{
+        //    if (_currentUser == null || _currentUser.Available == false)
+        //    {
+        //        return false;
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
 
         public User? GetUser(string email) => _userRepo.GetUserInDb(email);
 

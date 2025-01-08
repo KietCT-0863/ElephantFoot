@@ -168,3 +168,6 @@ D:\FPT\Personal Project\ElephantFoot\ElephantFoot.UI\obj\Debug\net8.0-windows\El
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.UI\obj\Debug\net8.0-windows\ref\ElephantFoot.UI.dll
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.UI\obj\Debug\net8.0-windows\ProfileWindow.g.cs
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.UI\obj\Debug\net8.0-windows\ProfileWindow.baml
+D:\FPT\Personal Project\ElephantFoot\ElephantFoot.UI\obj\Debug\net8.0-windows\OrderWindow.g.cs
+D:\FPT\Personal Project\ElephantFoot\ElephantFoot.UI\obj\Debug\net8.0-windows\OrderWindow.baml
+D:\FPT\Personal Project\ElephantFoot\ElephantFoot.UI\obj\Debug\net8.0-windows\ElephantFoot.UI.sourcelink.json

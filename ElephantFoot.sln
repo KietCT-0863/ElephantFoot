@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElephantFoot.BLL", "Elephan
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElephantFoot.DAL", "ElephantFoot.DAL\ElephantFoot.DAL.csproj", "{CC2E2FA5-3542-4CD1-A1CA-5B5BBA494E43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElephantFoot.API", "ElephantFoot.API\ElephantFoot.API.csproj", "{9918704F-20C0-47EA-948A-C567FC18CF57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{CC2E2FA5-3542-4CD1-A1CA-5B5BBA494E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC2E2FA5-3542-4CD1-A1CA-5B5BBA494E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC2E2FA5-3542-4CD1-A1CA-5B5BBA494E43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9918704F-20C0-47EA-948A-C567FC18CF57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9918704F-20C0-47EA-948A-C567FC18CF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9918704F-20C0-47EA-948A-C567FC18CF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9918704F-20C0-47EA-948A-C567FC18CF57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

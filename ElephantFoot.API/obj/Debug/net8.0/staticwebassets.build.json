@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "KOtFJ4BESqcaJVyhLgpM2CT0sNsZjX2/8XqV7bjYnYs=",
+  "Source": "ElephantFoot.API",
+  "BasePath": "_content/ElephantFoot.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

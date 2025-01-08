@@ -63,16 +63,6 @@ public partial class ElephantFootDbContext : DbContext
             entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.Quantity).HasDefaultValue(0);
             entity.Property(e => e.Title).HasMaxLength(255);
-
-            entity.HasOne(d => d.Author).WithMany(p => p.Books)
-                .HasForeignKey(d => d.AuthorId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Book_Author");
-
-            entity.HasOne(d => d.Category).WithMany(p => p.Books)
-                .HasForeignKey(d => d.CategoryId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Book_Category");
         });
 
         modelBuilder.Entity<Category>(entity =>

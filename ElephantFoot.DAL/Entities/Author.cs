@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace ElephantFoot.DAL.Entities;
 
@@ -11,5 +12,4 @@ public partial class Author
 
     public string? Biography { get; set; }
 
-    public virtual ICollection<Book> Books { get; set; } = new List<Book>();
 }

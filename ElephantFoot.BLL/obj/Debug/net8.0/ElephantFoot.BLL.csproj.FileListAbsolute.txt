@@ -28,3 +28,4 @@ D:\FPT\Personal Project\ElephantFoot\ElephantFoot.BLL\obj\Debug\net8.0\ElephantF
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.BLL\obj\Debug\net8.0\refint\ElephantFoot.BLL.dll
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.BLL\obj\Debug\net8.0\ElephantFoot.BLL.pdb
 D:\FPT\Personal Project\ElephantFoot\ElephantFoot.BLL\obj\Debug\net8.0\ref\ElephantFoot.BLL.dll
+D:\FPT\Personal Project\ElephantFoot\ElephantFoot.BLL\obj\Debug\net8.0\ElephantFoot.BLL.sourcelink.json
