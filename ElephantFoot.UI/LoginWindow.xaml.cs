@@ -4,6 +4,7 @@ using ElephantFoot.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +25,7 @@ namespace ElephantFoot.UI
     {
         UserServices _userServ = new();
         private User? _loginUser = null;
+        private readonly HttpClient _httpClient = new();
 
         public LoginWindow()
         {
@@ -62,39 +64,42 @@ namespace ElephantFoot.UI
             }
         }
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        private async void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            _loginUser = _userServ.Authentication(EmailText.Text, PasswordText.Password);
+            //_loginUser = _userServ.Authentication(EmailText.Text, PasswordText.Password);
 
-            if (EmailText.Text == "" || PasswordText.Password == "")
-            {
-                MessageBox.Show("Email and Password can not be empty!!!");
-                return;
-            }
+            //string url = $"https://localhost/GET/api/Auth?email={Uri.EscapeDataString(EmailText.Text)}&password={Uri.EscapeDataString(PasswordText.Password)}";
+            //MessageBox.Show(response.ToString());
 
-            if (_loginUser == null)
-            {
-                MessageBox.Show("Email is incorrect");
-                return;
-            }
+            //if (EmailText.Text == "" || PasswordText.Password == "")
+            //{
+            //    MessageBox.Show("Email and Password can not be empty!!!");
+            //    return;
+            //}
 
-            if (_loginUser.Password == "")
-            {
-                MessageBox.Show("Password is incorrect");
-                return;
-            }
+            //if (_loginUser == null)
+            //{
+            //    MessageBox.Show("Email is incorrect");
+            //    return;
+            //}
 
-            if (_loginUser.Available == false)
-            {
-                MessageBox.Show("Your account had been banned");
-                return;
-            }
+            //if (_loginUser.Password == "")
+            //{
+            //    MessageBox.Show("Password is incorrect");
+            //    return;
+            //}
 
-            MainProgramWindow mainProgram = new();
-            mainProgram.CurrentUser = _loginUser;
-            this.Hide();
-            mainProgram.ShowDialog();
-            this.Show();
+            //if (_loginUser.Available == false)
+            //{
+            //    MessageBox.Show("Your account had been banned");
+            //    return;
+            //}
+
+            //MainProgramWindow mainProgram = new();
+            //mainProgram.CurrentUser = _loginUser;
+            //this.Hide();
+            //mainProgram.ShowDialog();
+            //this.Show();
         }
 
         private void ForgotPassword_Click(object sender, MouseButtonEventArgs e)

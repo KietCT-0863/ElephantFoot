@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElephantFoot.BLL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dea92f1775fb4406c214d77f7f0f1e3d38e21d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15ed7eab7b0252b36f434983d7ec81885778587a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElephantFoot.BLL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElephantFoot.BLL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
